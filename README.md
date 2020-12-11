@@ -107,4 +107,4 @@ I created the script to get started with process automation. I do not encourage 
 - Tested on 2020.12.11 with `NR_OF_SUBMITS` set to 100 and all values set to random
 
 # Known issues
-- If you minimize firefox while the script is running Dropdowns can couse exception
+- If you minimize firefox while the script is running Dropdowns can cause exceptions
