@@ -1,7 +1,9 @@
-# GoogleFormFiller
+# Google Form Filler
 An easy to use **Node.js** script which autofills Google Forms.
 
 The script is currently in Beta state, which means errors might occur, also not all exceptions are handled.
+
+I created the script to get started with process automation. I do not encourage anyone to use it for swaying anonymous forms.
 
 # Requirements: <br/>
 - Node.js <br/>
