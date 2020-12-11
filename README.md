@@ -26,6 +26,7 @@ I created the script to get started with process automation. I do not encourage 
       ...
     ]
     ```
+   **Note:** Some `Types` are required to be called exactly in the right order (`Multiple Choice Grid` and `Checkbox Grid`) so it's a good practice to call each of them in the same order as the form is structured
 - Open a terminal in the project folder, type in `node index` and press enter
 
 # Types and Parameters
