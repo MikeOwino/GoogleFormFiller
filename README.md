@@ -98,12 +98,12 @@ I created the script to get started with process automation. I do not encourage 
     *If you want a specific row to be random, then pass 0 as the option of that row*
     
   ```javascript
-  Types.CheckboxGrid( [int] rows, [int] cols, [int] [[row1option1, row1option2, ...], [row2option1, row2option2, ...],...], [int] nrOfBoxesWanted );
+  Types.CheckboxGrid( [int] rows, [int] cols, [int] [[row1option1, row1option2, ...], [row2option1, row2option2, ...], ...], [int] nrOfBoxesWanted );
   ```
     If no parameter is specified the first option will be selected <br/>
     *If you want random options to be selected in each row, specify `rows` and `cols` only*<br/>
     *If you want a specific row to be random, then pass [] as the option of that row, then `nrOfBoxesWanted` boxes will be checked in that row*<br/>
-    *If `nrOfBoxesWanted` is not specified a random amount of boxes will be checked in each random row*
+    *If `nrOfBoxesWanted` is not specified a random amount of boxes will be checked in each row*
     
   ```javascript
   Types.Repeat( [Type] typeToRepeat, [int] nrOfIterations );
