@@ -6,7 +6,7 @@ The script is currently in Beta state, which means errors might occur, also not 
 I created the script to get started with process automation. I do not encourage anyone to use it for swaying anonymous forms.
 
 ### New to Beta 2.1
-- Filling Forms that use more than 1 page 
+- Filling Forms that use more than 1 page using `Types.Next()`
 - Creating `.txt` logs instead of just console logs
 - Repeating an element multiple times using `Types.Repeat()`
 - Statistics after the script finished running 
@@ -111,6 +111,14 @@ I created the script to get started with process automation. I do not encourage 
     `typeToRepeat` can be any `Type` object found above and is used exactly the same way <br>
     *For example `Types.Repeat(Types.ShortAnswer("Hello World"), 10)` means that*<br>
     *there are 10 short answer boxes below each other and each of them will be filled with "Hello World"*
+    
+  ```javascript
+  Types.Next();
+  ```
+    This function doesn't take any arguments, it only tells Selenium to click the `Next` button. <br>
+    *If this function is not called when a page has been filled, the script tries to fill the remaining* <br>
+    *elements on the same page which will lead to errors* <br>
+    **Note:** The script won't jump to the next page automatically 
 # Test environment
 - Node.js: v12.16.3
 - axios: 0.21.0
