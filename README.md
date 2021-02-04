@@ -5,6 +5,12 @@ The script is currently in Beta state, which means errors might occur, also not 
 
 I created the script to get started with process automation. I do not encourage anyone to use it for swaying anonymous forms.
 
+### New to Beta 2.1
+- Filling Forms that use more than 1 page 
+- Creating `.txt` logs instead of just console logs
+- Repeating an element multiple times using `Types.Repeat()`
+- Statistics after the script finished running 
+
 # Requirements: <br/>
 - Node.js <br/>
 - Dependencies: <br/>
@@ -26,7 +32,7 @@ I created the script to get started with process automation. I do not encourage 
       ...
     ]
     ```
-   **Note:** Some `Types` are required to be called exactly in the right order (`Multiple Choice Grid` and `Checkbox Grid`) so it's a good practice to call each of them in the same order as the form is structured
+   **Note:** Some `Types` are required to be called exactly in the right order (`Multiple Choice Grid` and `Checkbox Grid`) so the best practice is to call each of them in the same order as the form is structured
 - Open a terminal in the project folder, type in `node index` and press enter
 
 # Types and Parameters
@@ -67,7 +73,7 @@ I created the script to get started with process automation. I do not encourage 
     *If you want a random option to be selected, set `Your Choice` to 0 and `NumberOfChoices` to the number of all available options*
     
   ```javascript
-  Types.Checkbox( [int] [ choise1, choise2, ... , choiceN ], [int] numberOfBoxes, [int] wantedNr )
+  Types.Checkbox( [int] [ choice1, choice2, ... , choiceN ], [int] numberOfBoxes, [int] wantedNr )
   ```
     If no parameter is specified the first option will be selected <br/>
     *If you want random boxes to be selected, pass in [] as the first parameter, set `NumberOfChoices` to the number of all available options and set `wantedNr` to how much        boxes you want to be ticked*
@@ -98,13 +104,20 @@ I created the script to get started with process automation. I do not encourage 
     *If you want random options to be selected in each row, specify `rows` and `cols` only*<br/>
     *If you want a specific row to be random, then pass [] as the option of that row, then `nrOfBoxesWanted` boxes will be checked in that row*<br/>
     *If `nrOfBoxesWanted` is not specified a random amount of boxes will be checked in each random row*
+    
+  ```javascript
+  Types.Repeat( [Type] typeToRepeat, [int] nrOfIterations );
+  ```
+    `typeToRepeat` can be any `Type` object found above and is used exactly the same way <br>
+    *For example `Types.Repeat(Types.ShortAnswer("Hello World"), 10)` means that*<br>
+    *there are 10 short answer boxes below each other and each of them will be filled with "Hello World"*
 # Test environment
 - Node.js: v12.16.3
 - axios: 0.21.0
 - selenium-webdriver: 4.0.0-alpha.8
 - geckodriver: 0.28.0
 
-- Tested on 2020.12.11 with `NR_OF_SUBMITS` set to 100 and all values set to random
+- Tested on 2020.02.04 with `NR_OF_SUBMITS` set to 100 and all values set to random
 
 # Known issues
 - If you minimize firefox while the script is running Dropdowns can cause exceptions
