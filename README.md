@@ -5,6 +5,9 @@ The script is currently in Beta state, which means errors might occur, also not 
 
 I created the script to get started with process automation. I do not encourage anyone to use it for swaying anonymous forms.
 
+### New to Beta 2.1.5
+- Partial support for date and time
+
 ### New to Beta 2.1
 - Filling Forms that use more than 1 page using `Types.Next()`
 - Creating `.txt` logs instead of just console logs
@@ -32,7 +35,7 @@ I created the script to get started with process automation. I do not encourage 
       ...
     ]
     ```
-   **Note:** Some `Types` are required to be called exactly in the right order (`Multiple Choice Grid` and `Checkbox Grid`) so the best practice is to call each of them in the same order as the form is structured
+   **Note:** Some `Types` are required to be called exactly in the right order (`Multiple Choice Grid`, `Checkbox Grid` and `Short Answer` if either `Date` or `Time` is present) so the best practice is to call each of them in the same order as the form is structured
 - Open a terminal in the project folder, type in `node index` and press enter
 
 # Types and Parameters
@@ -47,11 +50,14 @@ I created the script to get started with process automation. I do not encourage 
   + Multiple Choice Grid
   + Checkbox Grid
   ```
+- **Partially supported types:**
+  ```diff
+  + Date
+  + Time
+  ```
 - **Not supported types:**
   ```diff
   - File Upload
-  - Date
-  - Time
   ```
 - **Parameters:**
   ```javascript
@@ -119,6 +125,23 @@ I created the script to get started with process automation. I do not encourage 
     *If this function is not called when a page has been filled, the script tries to fill the remaining* <br>
     *elements on the same page which will lead to errors* <br>
     **Note:** The script won't jump to the next page automatically 
+    
+    **The following section might be region specific, it has not been tested**
+    If your date input field doesn't look like `__/__/____` `Types.Date()` function might not work.
+    Also if your time input doesn't look like `__:__` `Types.Time()` function might not work.
+    
+  ```javascript
+  Types.Date([string] date);
+  ```
+    Date has to be specified **Exactly** in the following form: MM.DD.YYYY (eg.: "01.12.2021") <br>
+    *If no parameter is specified the current date will be used instead* <br>
+    
+  ```javascript
+  Types.Date([string] time
+  ``` 
+    Time has to be specified **Exactly** in the following form in 24 hour format: hh:mm (eg.: "23:15") <br>
+    *If no parameter is specified the current date will be used instead* <br>
+     
 # Test environment
 - Node.js: v12.16.3
 - axios: 0.21.0
