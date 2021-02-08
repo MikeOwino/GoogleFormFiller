@@ -128,7 +128,7 @@ I created the script to get started with process automation. I do not encourage 
     
     
     <br> **The following section is partial, meaning it might not work properly** <br>
-    If your date input field doesn't look like `__/__/____` `Types.Date()` function might not work. <br*
+    If your date input field doesn't look like `__/__/____` `Types.Date()` function might not work. <br>
     Also if your time input doesn't look like `__:__` `Types.Time()` function might not work. <br><br>
     
   ```javascript
