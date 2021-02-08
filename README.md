@@ -126,9 +126,10 @@ I created the script to get started with process automation. I do not encourage 
     *elements on the same page which will lead to errors* <br>
     **Note:** The script won't jump to the next page automatically 
     
-    **The following section might be region specific, it has not been tested**
-    If your date input field doesn't look like `__/__/____` `Types.Date()` function might not work.
-    Also if your time input doesn't look like `__:__` `Types.Time()` function might not work.
+    
+    <br> **The following section is partial, meaning it might not work properly** <br>
+    If your date input field doesn't look like `__/__/____` `Types.Date()` function might not work. <br*
+    Also if your time input doesn't look like `__:__` `Types.Time()` function might not work. <br><br>
     
   ```javascript
   Types.Date([string] date);
@@ -151,4 +152,4 @@ I created the script to get started with process automation. I do not encourage 
 - Tested on 2020.02.04 with `NR_OF_SUBMITS` set to 100 and all values set to random
 
 # Known issues
-- If you minimize firefox while the script is running Dropdowns can cause exceptions
+- Date and time are input format dependant which might be affected by your region
