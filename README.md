@@ -149,7 +149,7 @@ I created the script to get started with process automation. I do not encourage 
 - selenium-webdriver: 4.0.0-alpha.8
 - geckodriver: 0.28.0
 
-- Tested on 2020.02.04 with `NR_OF_SUBMITS` set to 100 and all values set to random
+- Tested on 2020.02.09 with `NR_OF_SUBMITS` set to 100 and all values set to random
 
 # Known issues
 - Date and time are input format dependant which might be affected by your region
