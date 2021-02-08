@@ -132,13 +132,13 @@ I created the script to get started with process automation. I do not encourage 
     Also if your time input doesn't look like `__:__` `Types.Time()` function might not work. <br><br>
     
   ```javascript
-  Types.Date([string] date);
+  Types.Date( [string] date );
   ```
     Date has to be specified **Exactly** in the following form: MM.DD.YYYY (eg.: "01.12.2021") <br>
     *If no parameter is specified the current date will be used instead* <br>
     
   ```javascript
-  Types.Date([string] time
+  Types.Date( [string] time );
   ``` 
     Time has to be specified **Exactly** in the following form in 24 hour format: hh:mm (eg.: "23:15") <br>
     *If no parameter is specified the current date will be used instead* <br>
