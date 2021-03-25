@@ -138,7 +138,7 @@ I created the script to get started with process automation. I do not encourage 
     *If no parameter is specified the current date will be used instead* <br>
     
   ```javascript
-  Types.Date( [string] time );
+  Types.Time( [string] time );
   ``` 
     Time has to be specified **Exactly** in the following form in 24 hour format: hh:mm (eg.: "23:15") <br>
     *If no parameter is specified the current date will be used instead* <br>
